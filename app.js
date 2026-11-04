@@ -11,9 +11,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.json({
+    status: "ok",
+    message: "✅ CS8 Kemjar Backend API is running!"
+  });
+});
+
 app.use("/users", userRoutes);
 app.use("/flags", flagRoutes);
-
 const PORT = process.env.PORT || 3000;
 if (!process.env.VERCEL) {
   app.listen(PORT, () => {
