@@ -1,0 +1,93 @@
+ID,Nama Lengkap,First Name,Username,Password,Email,Flag
+1,Fadhilhijan Garel Agfata,Fadhilhijan,fadhilhijanga,fadhilhijan123,fadhilhijan@test.com,FLAG{kemjar8_sqli_4af179bbd30f0197}
+2,CARLSSON KHOVIS,Carlsson,carlssonkh,carlsson123,carlsson@test.com,FLAG{kemjar8_sqli_fc9a8cd9ec8da9aa}
+3,Jonathan Christopher,Jonathan,jonathanch,jonathan123,jonathan@test.com,FLAG{kemjar8_sqli_aecb4ace6a650266}
+4,FERDYANO,Ferdyano,ferdyano,ferdyano123,ferdyano@test.com,FLAG{kemjar8_sqli_5767c9dbef7de83c}
+5,DANISH PUTRA DEVANANDA,Danish,danishpu,danish123,danish1@test.com,FLAG{kemjar8_sqli_8fb1c5bbff971c9b}
+6,Vincenzo Fabian Tisila,Vincenzo,vincenzofa,vincenzo123,vincenzo@test.com,FLAG{kemjar8_sqli_788f49903b6e9dc0}
+7,MUHAMMAD DHIYAULHAQ,Muhammad,muhammaddh,muhammad123,muhammad1@test.com,FLAG{kemjar8_sqli_77a0d6ebca063d6a}
+8,STEVEN,Steven,steven,steven123,steven@test.com,FLAG{kemjar8_sqli_67869d9cf7a7cba3}
+9,FAHMI MILAN AMYAR,Fahmi,fahmimi,fahmi123,fahmi@test.com,FLAG{kemjar8_sqli_543ec2b288299048}
+10,JOSHUA RICHARDO RIANGKAMANG,Joshua,joshuari,joshua123,joshua@test.com,FLAG{kemjar8_sqli_1c3b5bbcf9156013}
+11,Alwahib Raffi Raihan,Alwahib,alwahibra,alwahib123,alwahib@test.com,FLAG{kemjar8_sqli_6081faa4c8b62c1d}
+12,REINATHAN EZKHIEL KURNIAWAN,Reinathan,reinathanez,reinathan123,reinathan@test.com,FLAG{kemjar8_sqli_2be42106ea7149f5}
+13,NOVAN AGUNG WICAKSONO,Novan,novanag,novan123,novan@test.com,FLAG{kemjar8_sqli_d48044a33172ff8c}
+14,Otniel Kristian Sianturi,Otniel,otnielkr,otniel123,otniel@test.com,FLAG{kemjar8_sqli_c6d1b692a68f8b65}
+15,MUHAMMAD DAFFA RIZKI,Muhammad,muhammadda,muhammad123,muhammad2@test.com,FLAG{kemjar8_sqli_82dcde8e59b76bf0}
+16,RADYA GARDIAN PRANOTO,Radya,radyaga,radya123,radya@test.com,FLAG{kemjar8_sqli_700949bda968cfab}
+17,Zhafarel Alvarezqi Pradsandhanna K,Zhafarel,zhafarelal,zhafarel123,zhafarel@test.com,FLAG{kemjar8_sqli_816fe0f29cc865a7}
+18,AKBAR ANVASA FARABY,Akbar,akbaran,akbar123,akbar@test.com,FLAG{kemjar8_sqli_8701446ee282d620}
+19,Haidar Rafif Radithya,Haidar,haidarra,haidar123,haidar@test.com,FLAG{kemjar8_sqli_e49ccac548c97542}
+20,JESAYA HAMONANGAN GAUDENSIUS MALAU,Jesaya,jesayaha,jesaya123,jesaya@test.com,FLAG{kemjar8_sqli_f4dd8a9ab0b991ed}
+21,PERRY TJAHYA,Perry,perrytj,perry123,perry@test.com,FLAG{kemjar8_sqli_3f23020142ab3e3e}
+22,FAUZAN ARFA NOFIANTORO,Fauzan,fauzanar,fauzan123,fauzan@test.com,FLAG{kemjar8_sqli_a2ccb95e2cd2919c}
+23,NAUFAL RAHMAN,Naufal,naufalra,naufal123,naufal@test.com,FLAG{kemjar8_sqli_823843a963d4d57d}
+24,Raihan Muhammad Nafis Al-Kautsar,Raihan,raihanmu,raihan123,raihan@test.com,FLAG{kemjar8_sqli_d7e38bd895f7f106}
+25,Satrio Atalla Rahardjo,Satrio,satrioat,satrio123,satrio@test.com,FLAG{kemjar8_sqli_5863c0e9b0f5dfb1}
+26,Dimar Ilham Tamara,Dimar,dimaril,dimar123,dimar@test.com,FLAG{kemjar8_sqli_c3935f73016cd7d3}
+27,CLEMENTHEO BENAYA RAYA,Clementheo,clementheobe,clementheo123,clementheo@test.com,FLAG{kemjar8_sqli_c675eb005c12884e}
+28,Fernanda Raeka Yan Putra,Fernanda,fernandara,fernanda123,fernanda@test.com,FLAG{kemjar8_sqli_ba2db7db608d76d1}
+29,NABIL PUTRA NURFARIZ,Nabil,nabilpu,nabil123,nabil@test.com,FLAG{kemjar8_sqli_27748f11bbc3ae43}
+30,Ahmad Malik Prasetyo,Ahmad,ahmadma,ahmad123,ahmad@test.com,FLAG{kemjar8_sqli_b64cf05f9a17af4d}
+31,RAJA AVICENNA AL-KINDI VIJASA,Raja,rajaav,raja123,raja@test.com,FLAG{kemjar8_sqli_c0095625de4f5178}
+32,DANISH AL FAYYADH SUNARTA,Danish,danishal,danish123,danish2@test.com,FLAG{kemjar8_sqli_14d2b066041594f1}
+33,MOHAMAD RIZKY ALAMSYAH,Mohamad,mohamadri,mohamad123,mohamad@test.com,FLAG{kemjar8_sqli_30037ab20ef25b46}
+34,Eugenia Huwaida Imtinan,Eugenia,eugeniahu,eugenia123,eugenia@test.com,FLAG{kemjar8_sqli_00e8b83b5294a3a3}
+35,PUTRI AYU PEMBAYUN M,Putri,putriay,putri123,putri@test.com,FLAG{kemjar8_sqli_7861cab6c9faab37}
+36,Tomas Warren Wuisang,Tomas,tomaswa,tomas123,tomas@test.com,FLAG{kemjar8_sqli_4d0c21044bff5d6b}
+37,KHALISA ZAHRA MAULANA,Khalisa,khalisaza,khalisa123,khalisa@test.com,FLAG{kemjar8_sqli_07302c188570e4ac}
+38,NIRMALA SARI ZAHIROH,Nirmala,nirmalasa,nirmala123,nirmala@test.com,FLAG{kemjar8_sqli_9dd72cca7a82f5ec}
+39,SUTAN RENDY RIZALDI,Sutan,sutanre,sutan123,sutan@test.com,FLAG{kemjar8_sqli_08ff706bc318c588}
+40,Syifa Naila Maulidya,Syifa,syifana,syifa123,syifa1@test.com,FLAG{kemjar8_sqli_c8a7f2ff6832d54e}
+41,IRGY RABBANI SAKTI,Irgy,irgyra,irgy123,irgy@test.com,FLAG{kemjar8_sqli_6ca7f2c390f81731}
+42,Gorga Friedrik Simatupang,Gorga,gorgafr,gorga123,gorga@test.com,FLAG{kemjar8_sqli_6f9bd24e550be6f4}
+43,Nadia Izzati,Nadia,nadiaiz,nadia123,nadia@test.com,FLAG{kemjar8_sqli_24c0f629c27937d9}
+44,Kamila Salma Fathiyya,Kamila,kamilasa,kamila123,kamila@test.com,FLAG{kemjar8_sqli_31127dadaae94c15}
+45,Qais Ismail,Qais,qaisis,qais123,qais@test.com,FLAG{kemjar8_sqli_97d4697e0b34c6de}
+46,Toriq Fathoni Dezi,Toriq,toriqfa,toriq123,toriq@test.com,FLAG{kemjar8_sqli_70156c33bad4bc7e}
+47,Alicia,Alicia,alicia,alicia123,alicia@test.com,FLAG{kemjar8_sqli_c5c96d6acc3fdc71}
+48,Vanesa Kayla Zahra,Vanesa,vanesaka,vanesa123,vanesa@test.com,FLAG{kemjar8_sqli_c04d72b7cb2caad8}
+49,GEDE RAMA PRADNYA WIDADGA,Gede,gedera,gede123,gede@test.com,FLAG{kemjar8_sqli_0b9f07a08c4f1452}
+50,Andhika Fadhlan Wijanarko,Andhika,andhikafa,andhika123,andhika@test.com,FLAG{kemjar8_sqli_b2169cbf1cf3b642}
+51,Diandra Pramesti Wicaksono,Diandra,diandrapr,diandra123,diandra@test.com,FLAG{kemjar8_sqli_bc37a14b6b8ed7a0}
+52,ADE ZASKIA AZZAHRA,Ade,adeza,ade123,ade@test.com,FLAG{kemjar8_sqli_974f5dda540e876f}
+53,YUSRI SUKUR,Yusri,yusrisu,yusri123,yusri@test.com,FLAG{kemjar8_sqli_60d088047bd46acf}
+54,ZULFAHMI FAJRI,Zulfahmi,zulfahmifa,zulfahmi123,zulfahmi@test.com,FLAG{kemjar8_sqli_fc630382f3e185fc}
+55,NOVATAMA EKA FITRIA,Novatama,novatamaek,novatama123,novatama@test.com,FLAG{kemjar8_sqli_6c413a6eeabc19d7}
+56,Marshal Aufa Diliyana,Marshal,marshalau,marshal123,marshal@test.com,FLAG{kemjar8_sqli_3d49e54a3786e323}
+57,SALSABILA MAHARANI MUMTAZ,Salsabila,salsabilama,salsabila123,salsabila@test.com,FLAG{kemjar8_sqli_c2daa82e1871e382}
+58,Michael Christian,Michael,michaelch,michael123,michael@test.com,FLAG{kemjar8_sqli_d43964da3bffd65e}
+59,REYHAN BATARA,Reyhan,reyhanba,reyhan123,reyhan@test.com,FLAG{kemjar8_sqli_46da44c3d57571a6}
+60,TUBAGUS DAFA IZZA FARIZ,Tubagus,tubagusda,tubagus123,tubagus@test.com,FLAG{kemjar8_sqli_741927eda0efd5bc}
+61,Sabbia Meilandri Putri Delarosya,Sabbia,sabbiame,sabbia123,sabbia@test.com,FLAG{kemjar8_sqli_4693d7400c9c8351}
+62,David Alexander,David,davidal,david123,david@test.com,FLAG{kemjar8_sqli_05db8799ed2b975d}
+63,VALIANT JOSHUA,Valiant,valiantjo,valiant123,valiant@test.com,FLAG{kemjar8_sqli_6f86bd33fe389270}
+64,NICHOLAS EDMUND TANAKA,Nicholas,nicholased,nicholas123,nicholas@test.com,FLAG{kemjar8_sqli_882ed6a1b155f54d}
+65,Muhamad Rifqi Fadil Itsnain,Muhamad,muhamadri,muhamad123,muhamad@test.com,FLAG{kemjar8_sqli_1f9153cd3a42fbee}
+66,HAITSAM AHMAD FAKHRI,Haitsam,haitsamah,haitsam123,haitsam@test.com,FLAG{kemjar8_sqli_f4829d7f1e1150fb}
+67,MUHAMMAD RASYA SYAHPUTRA,Muhammad,muhammadra1,muhammad123,muhammad3@test.com,FLAG{kemjar8_sqli_071bb3cc38844fe9}
+68,Ayesha Zelene Faeyza,Ayesha,ayeshaze,ayesha123,ayesha@test.com,FLAG{kemjar8_sqli_2449d19e63516898}
+69,MUHAMMAD HASHIF JADE,Muhammad,muhammadha,muhammad123,muhammad4@test.com,FLAG{kemjar8_sqli_aafe1e8d4b8d32e5}
+70,RANA AQILA KARIM,Rana,ranaaq,rana123,rana@test.com,FLAG{kemjar8_sqli_968dbaf4adfb0f2e}
+71,ARKAAN PASYA SEPLITARA,Arkaan,arkaanpa,arkaan123,arkaan@test.com,FLAG{kemjar8_sqli_821e2193a1828b11}
+72,PASHA AHMAD SHIDQI PRATAMA,Pasha,pashaah,pasha123,pasha@test.com,FLAG{kemjar8_sqli_eda042c4d5834c09}
+73,SYIFA AULIA AZHIM,Syifa,syifaau,syifa123,syifa2@test.com,FLAG{kemjar8_sqli_290ca411dde05131}
+74,SAFINA AMARANI,Safina,safinaam,safina123,safina@test.com,FLAG{kemjar8_sqli_17570c66feebcd2b}
+75,Djukallita Tafiana Djoewarsa,Djukallita,djukallitata,djukallita123,djukallita@test.com,FLAG{kemjar8_sqli_e3f53fc6633c998e}
+76,THALITA SALMA ARTANTI,Thalita,thalitasa,thalita123,thalita@test.com,FLAG{kemjar8_sqli_b694ef53fbc33e20}
+77,ARYA WIBAWA ATMANEGARA,Arya,aryawi,arya123,arya@test.com,FLAG{kemjar8_sqli_67d35d3ca0c31e23}
+78,ABYAN AMMAR ZAKI,Abyan,abyanam,abyan123,abyan@test.com,FLAG{kemjar8_sqli_ca0f794542ba9e52}
+79,Aridho Sectio Caesar,Aridho,aridhose,aridho123,aridho@test.com,FLAG{kemjar8_sqli_786c4eb08bf8044c}
+80,FAHREZA DWI CAHYO PURNOMO,Fahreza,fahrezadw,fahreza123,fahreza@test.com,FLAG{kemjar8_sqli_90206a0d996edf83}
+81,Sakabudi Muhammad,Sakabudi,sakabudimu,sakabudi123,sakabudi@test.com,FLAG{kemjar8_sqli_bc249de8c109914f}
+82,AIDAN ARDHAZIZI,Aidan,aidanar,aidan123,aidan@test.com,FLAG{kemjar8_sqli_22258f7fb92eb602}
+83,Mohammad Ariq Haqi,Mohammad,mohammadar,mohammad123,mohammad@test.com,FLAG{kemjar8_sqli_086187fb1702f051}
+84,HAIKAL GIFARI INZAGHI,Haikal,haikalgi,haikal123,haikal@test.com,FLAG{kemjar8_sqli_9fbe186c325acd9a}
+85,MUHAMMAD ZAKI AL KHAIRI,Muhammad,muhammadza,muhammad123,muhammad5@test.com,FLAG{kemjar8_sqli_795c0964f69fbd9b}
+86,MUHAMMAD RAFIF BATUBARA,Muhammad,muhammadra2,muhammad123,muhammad6@test.com,FLAG{kemjar8_sqli_c4c18b73f2295e27}
+87,Abram Adrian Wilman Simanjuntak,Abram,abramad,abram123,abram@test.com,FLAG{kemjar8_sqli_2078fe49d225b31e}
+88,Putu Arkana Satriakusuma,Putu,putuar,putu123,putu@test.com,FLAG{kemjar8_sqli_91ce621145b9e5a8}
+89,Soraya Azzizah Pahlevi,Soraya,sorayaaz,soraya123,soraya@test.com,FLAG{kemjar8_sqli_24d0760cd7237e03}
+90,Kayla Joanna Irsy Kusumah,Kayla,kaylajo,kayla123,kayla@test.com,FLAG{kemjar8_sqli_af98a84b5be6da22}
+91,Zahir,Zahir,zahir,zahir123,zahir@test.com,FLAG{kemjar8_sqli_cc1ed77127727f04}
+92,Naziehan Labieb,Naziehan,naziehanla,naziehan123,naziehan@test.com,FLAG{kemjar8_sqli_3a7436334980a0fb}
