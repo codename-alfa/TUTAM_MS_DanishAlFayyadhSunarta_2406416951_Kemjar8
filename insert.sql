@@ -38,7 +38,7 @@ INSERT INTO public.users (id, name, username, email, password) VALUES
 (17, 'Zhafarel', 'zhafarelal', 'zhafarel@test.com', 'zhafarel123'),
 (18, 'Akbar', 'akbaran', 'akbar@test.com', 'akbar123'),
 (19, 'Haidar', 'haidarra', 'haidar@test.com', 'haidar123'),
-(20, 'Jesaya', 'jesayaha', 'jesaya@test.com', 'jesaya123'),
+(20, 'Jesaya', 'jesayaha', 'jesaya@test.com', 'jesagger'),
 (21, 'Perry', 'perrytj', 'perry@test.com', 'perry123'),
 (22, 'Fauzan', 'fauzanar', 'fauzan@test.com', 'fauzan123'),
 (23, 'Naufal', 'naufalra', 'naufal@test.com', 'naufal123'),
