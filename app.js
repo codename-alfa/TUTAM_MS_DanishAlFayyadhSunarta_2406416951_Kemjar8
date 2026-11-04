@@ -14,6 +14,11 @@ app.use(cors());
 app.use("/users", userRoutes);
 app.use("/flags", flagRoutes);
 
-app.listen(3000, () => {
-  console.log("✅ Server running at http://localhost:3000");
-});
+const PORT = process.env.PORT || 3000;
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`✅ Server running at http://localhost:${PORT}`);
+  });
+}
+
+module.exports = app;
