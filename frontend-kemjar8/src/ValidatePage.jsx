@@ -11,36 +11,54 @@ function ValidatePage() {
   const [message, setMessage] = useState({ text: "", type: "" });
 
   useEffect(() => {
-    // Ambil user_id dari localStorage
     try {
       const storedUser = JSON.parse(localStorage.getItem("userData"));
-      if (storedUser?.id) {
-        setUserId(storedUser.id);
+      const parsedId = Number(storedUser?.id);
+      if (
+        storedUser &&
+        Number.isInteger(parsedId) &&
+        parsedId > 0 &&
+        typeof storedUser.name === "string"
+      ) {
+        setUserId(parsedId);
         setUserName(storedUser.name);
       } else {
-        setMessage({
-          text: "User not found. Please login first.",
-          type: "error",
-        });
+        localStorage.removeItem("userData");
+        navigate("/", { replace: true });
       }
     } catch (err) {
-      setMessage({ text: "Failed to read user data.", type: "error" });
+      localStorage.removeItem("userData");
+      navigate("/", { replace: true });
     }
-  }, []);
+  }, [navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
     setMessage({ text: "", type: "" });
 
+    const parsedId = Number(userId);
+    const cleanFlag = flag.trim();
+
+    if (!Number.isInteger(parsedId) || parsedId <= 0) {
+      setMessage({
+        text: "Invalid user session. Please login again.",
+        type: "error",
+      });
+      return;
+    }
+
+    if (!/^FLAG\{[a-zA-Z0-9_]{5,64}\}$/.test(cleanFlag)) {
+      setMessage({
+        text: "Invalid flag format.",
+        type: "error",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
     try {
-      if (!userId) {
-        throw new Error("User ID not found in local storage.");
-      }
-
-      const data = await validateFlags(userId, flag);
-      console.log("Response:", data);
-
+      const data = await validateFlags(parsedId, cleanFlag);
       const result = data?.data?.[0];
 
       if (result) {
@@ -92,6 +110,7 @@ function ValidatePage() {
               id="flag"
               value={flag}
               onChange={(e) => setFlag(e.target.value)}
+              maxLength={64}
               required
               disabled={isLoading}
               className="w-full px-4 py-2 bg-black-30 border border-black rounded-md text-white placeholder-white placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 disabled:opacity-50"

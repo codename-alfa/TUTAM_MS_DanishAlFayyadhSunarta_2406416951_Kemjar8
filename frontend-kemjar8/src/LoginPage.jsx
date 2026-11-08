@@ -13,20 +13,43 @@ function LoginPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true);
     setMessage({ text: "", type: "" });
 
-    try {
-      const data = await loginUser(username, password);
-      const overFlag = data.user.length > 1 ? 1 : 0;
+    const cleanUsername = username.trim();
+    const cleanPassword = password.trim();
 
-      if (overFlag === 0) {
+    if (!/^[a-zA-Z0-9_]{3,30}$/.test(cleanUsername)) {
+      setMessage({
+        text: "Username must be 3-30 alphanumeric characters.",
+        type: "error",
+      });
+      return;
+    }
+
+    if (
+      cleanPassword.length < 3 ||
+      cleanPassword.length > 64 ||
+      /('|--|;|\/\*|\*\/)/.test(cleanPassword)
+    ) {
+      setMessage({
+        text: "Invalid password format.",
+        type: "error",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const data = await loginUser(cleanUsername, cleanPassword);
+
+      if (Array.isArray(data?.user) && data.user.length === 1) {
         localStorage.setItem("userData", JSON.stringify(data.user[0]));
         navigate("/home");
       } else {
         setMessage({
-          text: "Hello: " + data.user.map((u) => u.name).join(", "),
-          type: "success",
+          text: "Invalid authentication response.",
+          type: "error",
         });
       }
     } catch (err) {
@@ -89,6 +112,7 @@ function LoginPage() {
                 id="username"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
+                maxLength={30}
                 required
                 disabled={isLoading}
                 className="w-full px-4 py-2 bg-black-30 border border-black rounded-md text-gray-100 placeholder-white placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent disabled:opacity-50"
@@ -108,6 +132,7 @@ function LoginPage() {
                 id="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                maxLength={64}
                 required
                 disabled={isLoading}
                 className="w-full px-4 py-2 bg-black-30 border border-black rounded-md text-gray-100 placeholder-white placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent disabled:opacity-50"

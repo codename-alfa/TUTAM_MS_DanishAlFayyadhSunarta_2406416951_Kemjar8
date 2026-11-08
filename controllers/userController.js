@@ -1,70 +1,61 @@
 const User = require("../models/userModels");
 
+const USERNAME_REGEX = /^[a-zA-Z0-9_]{3,30}$/;
+const SQL_META_REGEX = /('|--|;|\/\*|\*\/)/;
+
+function isValidCredentials(username, password) {
+  if (typeof username !== "string" || typeof password !== "string") return false;
+  const cleanUser = username.trim();
+  if (!USERNAME_REGEX.test(cleanUser)) return false;
+  if (password.length < 3 || password.length > 64) return false;
+  if (SQL_META_REGEX.test(password)) return false;
+  return true;
+}
+
 exports.getUsers = async (req, res) => {
-  try {
-    const users = await User.findAll();
-    res.json(users);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to fetch users" });
-  }
+  return res.status(403).json({ error: "Forbidden" });
 };
 
 exports.createUser = async (req, res) => {
-  const { name, username, email, password } = req.body;
-  try {
-    const newUser = await User.create({ name, username, email, password });
-    res.status(201).json(newUser);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to create user" });
-  }
+  return res.status(403).json({ error: "Forbidden" });
 };
 
 exports.updateUser = async (req, res) => {
-  const { id } = req.params;
-  const { name, username, email, password } = req.body;
-  try {
-    const updatedUser = await User.update(id, { name, username, email, password });
-    if (!updatedUser) return res.status(404).json({ error: "User not found" });
-    res.json(updatedUser);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to update user" });
-  }
+  return res.status(403).json({ error: "Forbidden" });
 };
 
 exports.deleteUser = async (req, res) => {
-  const { id } = req.params;
-  try {
-    await User.remove(id);
-    res.json({ message: "User deleted" });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to delete user" });
-  }
+  return res.status(403).json({ error: "Forbidden" });
 };
 
 exports.loginVulnerable = async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password } = req.body || {};
+  if (!isValidCredentials(username, password)) {
+    return res.status(400).json({ error: "Invalid input format" });
+  }
   try {
-    const user = await User.findVulnerable(username, password);
-    if (!user) return res.status(401).json({ error: "Invalid credentials" });
-    res.json({ message: "Login successful", user });
+    const user = await User.findVulnerable(username.trim(), password);
+    if (!user || user.length === 0) {
+      return res.status(401).json({ error: "Invalid credentials" });
+    }
+    return res.json({ message: "Login successful", user: [user[0]] });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Login failed" });
+    return res.status(500).json({ error: "Login failed" });
   }
 };
 
 exports.getPasswordByCredentials = async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password } = req.body || {};
+  if (!isValidCredentials(username, password)) {
+    return res.status(400).json({ error: "Invalid input format" });
+  }
   try {
-    const result = await User.findPasswordByCredentials(username, password);
-    if (!result) return res.status(404).json({ error: "User not found" });
-    res.json({ response: result });
+    const result = await User.findPasswordByCredentials(username.trim(), password);
+    if (!result || result.length === 0) {
+      return res.status(401).json({ error: "Invalid credentials" });
+    }
+    return res.json({ response: [{ username: result[0].username, valid: true }] });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to fetch password" });
+    return res.status(500).json({ error: "Failed to verify password" });
   }
 };

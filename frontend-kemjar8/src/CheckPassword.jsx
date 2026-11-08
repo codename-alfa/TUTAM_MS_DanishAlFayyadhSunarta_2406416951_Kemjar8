@@ -11,33 +11,49 @@ function CheckPasswordPage() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsLoading(true);
         setMessage({ text: "", type: "" });
 
+        const cleanUsername = username.trim();
+        const cleanPassword = password.trim();
+
+        if (!/^[a-zA-Z0-9_]{3,30}$/.test(cleanUsername)) {
+            setMessage({
+                text: "Username must be 3-30 alphanumeric characters.",
+                type: "error",
+            });
+            return;
+        }
+
+        if (
+            cleanPassword.length < 3 ||
+            cleanPassword.length > 64 ||
+            /('|--|;|\/\*|\*\/)/.test(cleanPassword)
+        ) {
+            setMessage({
+                text: "Invalid password format.",
+                type: "error",
+            });
+            return;
+        }
+
+        setIsLoading(true);
+
         try {
-            const data = await getPassword(username, password);
-            console.log(data);
+            const data = await getPassword(cleanUsername, cleanPassword);
+            const item =
+                Array.isArray(data?.response) && data.response.length === 1
+                    ? data.response[0]
+                    : null;
 
-            if (Array.isArray(data.response) && data.response.length > 0) {
-                const entries = data.response
-                    .map(
-                        (item, i) =>
-                            `Your username is ${item.username}, and your password is correct`
-                    )
-                    .join("\n");
-
+            if (item?.username) {
                 setMessage({
-                    text: entries,
+                    text: `Your username is ${item.username}, and your password is correct`,
                     type: "success",
                 });
             } else {
                 setMessage({
-                    text:
-                        "Password is correct!" +
-                        (data?.response?.username
-                            ? ` (Username: ${data.response.username})`
-                            : ""),
-                    type: "success",
+                    text: "Incorrect password",
+                    type: "error",
                 });
             }
         } catch (err) {
@@ -69,6 +85,7 @@ function CheckPasswordPage() {
                             id="username"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
+                            maxLength={30}
                             required
                             disabled={isLoading}
                             className="w-full px-4 py-2 bg-black-30 border border-black rounded-md text-white placeholder-white placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent disabled:opacity-50"
@@ -85,6 +102,7 @@ function CheckPasswordPage() {
                             id="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            maxLength={64}
                             required
                             disabled={isLoading}
                             className="w-full px-4 py-2 bg-black-30 border border-black rounded-md text-white placeholder-white placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent disabled:opacity-50"

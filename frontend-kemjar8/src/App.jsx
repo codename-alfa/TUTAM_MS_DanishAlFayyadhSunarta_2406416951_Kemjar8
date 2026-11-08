@@ -7,17 +7,39 @@ import ValidatePage from "./ValidatePage";
 import { Navigate } from "react-router-dom";
 import NotFoundPage from "./NotFoundPage";
 
+function getValidUserSession() {
+  const raw = localStorage.getItem("userData");
+  if (!raw) return null;
+  try {
+    const parsed = JSON.parse(raw);
+    const id = Number(parsed?.id);
+    if (
+      parsed &&
+      Number.isInteger(id) &&
+      id > 0 &&
+      typeof parsed.username === "string" &&
+      /^[a-zA-Z0-9_]{3,30}$/.test(parsed.username)
+    ) {
+      return parsed;
+    }
+  } catch (err) {
+    // invalid JSON in localStorage
+  }
+  localStorage.removeItem("userData");
+  return null;
+}
+
 function ProtectedRoute({ children }) {
-  const userData = localStorage.getItem("userData");
-  if (!userData) {
+  const user = getValidUserSession();
+  if (!user) {
     return <Navigate to="/" replace />;
   }
   return children;
 }
 
 function LoggedUser({ children }) {
-  const userData = localStorage.getItem("userData");
-  if (userData) {
+  const user = getValidUserSession();
+  if (user) {
     return <Navigate to="/home" replace />;
   }
   return children;
